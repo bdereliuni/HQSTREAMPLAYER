@@ -151,7 +151,6 @@ export default function Watch() {
 
       <div className="player">
         <div className="player-controls">
-          <i className="fa-regular fa-arrow-left" onClick={() => nav(`/${type}/${id}`)}></i>
           {type === 'series' && episode < maxEpisodes && (
             <i
               className="fa-regular fa-forward-step right"
@@ -160,7 +159,6 @@ export default function Watch() {
           )}
         </div>
 
-        <h2 className="player-title">{getTitle()}</h2>
         <iframe allowFullScreen referrerPolicy="origin" title={getTitle()} src={getSource()}></iframe>
       </div>
     </>
